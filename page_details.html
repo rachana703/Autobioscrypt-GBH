@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Details</title>
+<script src="./node_modules/web3/dist/web3.min.js"></script>
+<style> 
+    img {
+        
+        position: absolute;
+        size: cover;
+        z-index: -1;
+        opacity: 0.8;
+        width: 100%;
+        height: 100%;
+                
+    }
+    
+    </style>
+<!--cookie font-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!--materialize-->
+      <link rel = "stylesheet"
+         href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+             
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+      </script> 
+
+
+        <!--editor-->
+        <!-- include libraries(jQuery, bootstrap) -->
+          <!-- include libraries(jQuery, bootstrap) -->
+      <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> 
+      <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
+
+      <!-- include summernote css/js -->
+      <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
+
+
+
+
+</head>
+
+   <body>
+    <img src="views/a1.jpg"></img>
+         <div class = "col s12 m12 l12">
+            <nav>
+               <div class = "nav-wrapper #880e4f black darken-3">
+                  <p class = "brand-logo left" style="font-family: Cookie; font-size: 50px;"> &nbsp;&nbsp;Autobioscrypt</p>
+                  <ul id = "nav-mobile" class = "right hide-on-med-and-down">
+                    <li><a href = "http://localhost:3000/link_to_book_details">Start new Book</a></li>
+                    <li> <a href="http://localhost:3000/browse">Browse Books</a></li>
+                     <li><a href = "http://localhost:3000/logout">Logout</a></li>
+               </div>
+            </nav>
+         </div>
+    <center>
+        <br><br><br><br>
+     <h1 style="font-family: Cookie; font-size: 50px;"> Start writing your story:</h1>
+<form name="home" action="http://localhost:3000/page_details" method="post">
+    <!--<input type="text" name="msg" id="msg" size="40"><br>
+   
+    <input type="submit" id="submit" value="Submit">-->
+
+    <div class="form-group" style="width: 1300px;">
+          <textarea rows="50" cols="50" id="summernote" class="form-control" placeholder="Page Content" name="content" required></textarea>
+            
+    </div>
+
+    <button class="btn waves-effect waves-light #880e4f black darken-3" style="width: 500px; color: white;" type="submit" id="submit">Submit</button>
+
+
+    <!--<input type="submit" id="submit" value="Submit">-->
+
+
+</form>
+</center>
+ <script>
+    $(document).ready(function() {
+      
+          $('#summernote').summernote({
+              height: 300,                 // set editor height
+              minHeight: null,             // set minimum height of editor
+              maxHeight: null,             // set maximum height of editor
+              focus: true                  // set focus to editable area after initializing summernote
+        });
+
+
+    });
+  
+  </script>
+
+
+
+</body>
+
+</html>

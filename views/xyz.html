@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style> 
+    img {
+        
+        position: absolute;
+        size: cover;
+        z-index: -1;
+        opacity: 0.8;
+        width: 100%;
+        height: 100%;
+                
+    }
+
+#logout{
+  background-color: #000000;
+}
+
+.button2 {
+  background-color: #333;
+  display: inline-block;
+  border-radius: 10px;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 5px;
+  width: 370px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button2:hover span {
+  padding-right: 25px;
+}
+
+.button2:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+* {
+  box-sizing: border-box;
+  
+}
+
+#column {
+  float: left;
+  width: 70%;
+  padding: 10px;
+  height: 300px;
+  border: none;
+  
+
+}
+#column1 {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  height: 300px;
+  
+}
+
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #333;
+  
+}
+
+li {
+  float: left;
+  
+}
+
+li a {
+  display: block;
+  color: white;
+  font-size:20px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+}
+
+li a:hover {
+  background-color: #111;
+  
+}
+
+#imgtag1 {
+  position: absolute;
+  top:150px;
+  left:50px;
+  border-radius:15px; 
+}
+
+#ahref1 {
+  position: absolute;
+  top:350px;
+  left:120px;
+  font-size:20px;
+  color: black;
+}
+
+#imgtag2 {
+  position: absolute;
+  top:150px;
+  left:370px;
+  border-radius:15px; 
+}
+
+#ahref2 {
+  position: absolute;
+  top:350px;
+  left:440px;
+  font-size:20px;
+  color: black;
+}
+
+#imgtag3 {
+  position: absolute;
+  top:150px;
+  left:690px;
+  border-radius:15px; 
+}
+
+#ahref3 {
+  position: absolute;
+  top:350px;
+  left:770px;
+  font-size:20px;
+  color: black;
+}
+
+#imgtag4 {
+  position: absolute;
+  top:400px;
+  left:50px;
+  border-radius:15px; 
+}
+
+#ahref4 {
+  position: absolute;
+  top:600px;
+  left:120px;
+  font-size:20px;
+  color: black;
+}
+
+#imgtag5 {
+  position: absolute;
+  top:400px;
+  left:370px;
+  border-radius:15px; 
+}
+
+#ahref5 {
+  position: absolute;
+  top:600px;
+  left:440px;
+  font-size:20px;
+  color: black;
+}
+
+#imgtag6 {
+  position: absolute;
+  top:400px;
+  left:690px;
+  border-radius:15px; 
+}
+
+#ahref6 {
+  position: absolute;
+  top:600px;
+  left:770px;
+  font-size:20px;
+  color: black;
+}
+
+
+#firstTable tr {
+    border:0px;
+    padding: 300px;
+    margin-left: 20px;
+}
+
+
+</style>
+
+    <script src="./node_modules/web3/dist/web3.min.js"></script>
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--cookie font-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+  
+    <!--materialize-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
+      <link rel = "stylesheet"
+         href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+             
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+      </script> 
+</head>
+
+   <body>
+       <img src="views/a1.jpg"></img>
+         <div class = "col s12 m12 l12">
+            <nav>
+               <div class = "nav-wrapper #880e4f black darken-3">
+                  <p class = "brand-logo left" style="font-family: Cookie; font-size: 50px;"> &nbsp;&nbsp;Autobioscrypt</p>
+                  <ul id = "nav-mobile" class = "right hide-on-med-and-down">
+                     <li id="logout"><a href = "http://localhost:3000/logout">Logout</a></li>
+               </div>
+            </nav>
+         </div>
+ <!--my code--> 
+
+<div id="column">
+<ul>
+  <li><a class="active" href="#home">Filters</a></li>
+  <li><a href="#news">Searches</a></li>
+</ul>
+<br>
+
+<img id="imgtag1" src="views/wall.jpg" alt="img not available" style="height:200px;width:200px;">
+<a href="" id="ahref1">Book 1</a>
+
+<img id="imgtag2" src="views/wall.jpg" alt="img not available" style="height:200px;width:200px;">
+<a href="" id="ahref2">Book 2</a>
+
+<img id="imgtag3" src="views/wall.jpg" alt="img not available" style="height:200px;width:200px;">
+<a href="" id="ahref3">Book 3</a>
+
+<img id="imgtag4" src="views/wall.jpg" alt="img not available" style="height:200px;width:200px;">
+<a href="" id="ahref4">Book 4</a>
+
+<img id="imgtag5" src="views/wall.jpg" alt="img not available" style="height:200px;width:200px;">
+<a href="" id="ahref5">Book 5</a>
+
+<img id="imgtag6" src="views/wall.jpg" alt="img not available" style="height:200px;width:200px;">
+<a href="" id="ahref6">Book 6</a>
+</div>
+
+<div id="column1">
+<br><br>
+<!-- changes for UI -->
+<form name="home2" action="http://localhost:3000/link_to_book_details" method="post">
+<button class="button2" style="vertical-align:middle"><span>New</span></button>
+</form>
+<br><br>
+<form name="home2" action="http://localhost:3000/book_details2" method="post">
+<button class="button2" style="vertical-align:middle"><span>Continue</span></button>
+</form>
+</div>
+
+
+
+
+
+  </body>
+
+</html>
